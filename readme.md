@@ -2,4 +2,4 @@
 ## Click on issues tab
 #### Find an issue you would like to contribute too
    * Not all contributions need to be development
-#### If there is an issue recongized but not discussed, create a new issue
+#### If there is an issue recognized but not discussed, create a new issue
