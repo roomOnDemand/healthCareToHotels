@@ -8,13 +8,9 @@
 
 # Git Hygine
   * Master will only contain merges
-  * Will deploy from master
-  * ensure commits run on local dev environment
+  * Will deploy from deploy branch (only change is switching to postgresdb for prod)
+  * ensure commits run on local dev environment before merge request
   
-
-
-
-
 
 
 # Redwood
