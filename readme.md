@@ -1,3 +1,22 @@
+# Newcomers
+  * Create issues (see issues tab) for all concerns
+  * Comment on issues
+  * Write Code
+    * TODO create a kanban board
+
+
+
+# Git Hygine
+  * Master will only contain merges
+  * Will deploy from master
+  * ensure commits run on local dev environment
+  
+
+
+
+
+
+
 # Redwood
 >**HEADS UP:** RedwoodJS is _NOT_ ready for use in Production. It relies heavily on Prisma2, which is currently in testing with an expected production release coming soon. See status at ["Is Prisma2 Ready?"](https://isprisma2ready.com)
 
