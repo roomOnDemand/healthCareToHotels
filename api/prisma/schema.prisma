@@ -27,7 +27,6 @@ model Space {
   type          String?
   size          String?
   price         String?
-  availability  Boolean
   listingUrl    String
 }
 
