@@ -1,6 +1,6 @@
 datasource DS {
   provider = "sqlite"
-  url = env("DATABASE_URL")
+  url = "***"
 }
 
 generator photonjs {
@@ -30,4 +30,4 @@ model Space {
   availability  Boolean
   listingUrl    String
 }
-
+// there should be a function which calculates distances between lat/long

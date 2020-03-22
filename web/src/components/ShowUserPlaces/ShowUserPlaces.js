@@ -18,8 +18,6 @@ const ShowUserPlaces = () => {
     //let's try a single link
 
     if (didMount) {
-      console.log('onclick')
-
       renderComp(
         placesExist ? (
           <PlacesExist position={{ latitude, longitude }} />
