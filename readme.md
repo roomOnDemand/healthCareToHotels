@@ -5,21 +5,6 @@ https://join.slack.com/share/I0104BSNDCJ/tglyB7qOob1gK7nMuLltKu3N/enQtMTAwNDQwMD
 
 
 
-
-# Git Hygine
-  * Master will only contain merges
-  * Will deploy from deploy branch (only change is switching to postgresdb for prod)
-  * ensure commits run on local dev environment before merge request
-  
-
-
-# Additional Redwood
-  * localhost:8910 is app server
-  * localhost:8911 is graphql server
-
-
-
-
 # Redwood
 >**HEADS UP:** RedwoodJS is _NOT_ ready for use in Production. It relies heavily on Prisma2, which is currently in testing with an expected production release coming soon. See status at ["Is Prisma2 Ready?"](https://isprisma2ready.com)
 
