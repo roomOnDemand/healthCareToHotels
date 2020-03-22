@@ -1,9 +1,8 @@
 # Newcomers
-  * Slack Channel: https://join.slack.com/share/I0104BSNDCJ/tglyB7qOob1gK7nMuLltKu3N/enQtMTAwNDQwMDc2MTQyNi1kODlmMTFjYzM0ZTY2ODJlOGNhODk2NGE5MjQ4MzMwZTYyZGQzYzEzNDRkNTdiY2I5MTllOGU5NjdmNDMzYzZh
-  * Create issues (see issues tab) for all concerns
-  * Comment on issues
-  * Write Code
-    * TODO create a kanban board
+## SEE ISSUES / CREATE ISSUES / SOLVE ISSUES
+## Slack Channel:
+https://join.slack.com/share/I0104BSNDCJ/tglyB7qOob1gK7nMuLltKu3N/enQtMTAwNDQwMDc2MTQyNi1kODlmMTFjYzM0ZTY2ODJlOGNhODk2NGE5MjQ4MzMwZTYyZGQzYzEzNDRkNTdiY2I5MTllOGU5NjdmNDMzYzZh
+
 
 
 
