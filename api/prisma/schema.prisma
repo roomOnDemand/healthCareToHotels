@@ -18,3 +18,16 @@ model User {
   long Float
   //location
 }
+
+model Space {
+  id            Int @id @default(autoincrement())
+  address       String
+  state         String
+  zipcode       String
+  type          String?
+  size          String?
+  price         String?
+  availability  Boolean
+  listingUrl    String
+}
+// there should be a function which calculates distances between lat/long

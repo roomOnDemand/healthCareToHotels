@@ -1,24 +1,49 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { usePosition } from 'use-position'
 import PlacesExist from 'src/components/PlacesExist'
 import PlacesDoNotExist from 'src/components/PlacesDoNotExist'
 
-const DoPlacesExist = () => {
-  const { latitude, longitude, error } = usePosition()
-  const [placesExist, setPlacesExist] = useState(false)
-
-  return placesExist ? (
-    <PlacesExist position={{ latitude, longitude }} /> //may want to switch to links
-  ) : (
-    <PlacesDoNotExist />
-  )
-  //if no user location
-  //display zipcode form
-}
+//import { Link, routes } from '@redwoodjs/router'
 
 const ShowUserPlaces = () => {
-  return <button onClick={DoPlacesExist}>Find Places</button>
-  //<DoPlacesExist />
+  const { latitude, longitude, error } = usePosition()
+
+  const [placesExist, setPlaces] = useState(false)
+  const [didMount, setDidMount] = useState(false)
+  const [trigger, setTrigger] = useState(false)
+  const [comp, renderComp] = useState(null)
+
+  useEffect(() => {
+    //didMount working correctly
+    //let's try a single link
+
+    if (didMount) {
+      console.log('onclick')
+
+      renderComp(
+        placesExist ? (
+          <PlacesExist position={{ latitude, longitude }} />
+        ) : (
+          <PlacesDoNotExist />
+        )
+      )
+    }
+
+    setDidMount(true)
+  }, [trigger])
+  //break this problem up further
+
+  return (
+    <>
+      <button onClick={() => setTrigger(true)}>Search For Places</button>
+      {comp}
+    </>
+  )
 }
 
 export default ShowUserPlaces
+
+// Problem statement
+// targeting
+// relationship w/ lofty space
+// demo
