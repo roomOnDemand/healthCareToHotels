@@ -1,3 +1,12 @@
+# Newcomers
+## SEE ISSUES / CREATE ISSUES / SOLVE ISSUES
+## Slack Channel:
+https://join.slack.com/share/I0104BSNDCJ/tglyB7qOob1gK7nMuLltKu3N/enQtMTAwNDQwMDc2MTQyNi1kODlmMTFjYzM0ZTY2ODJlOGNhODk2NGE5MjQ4MzMwZTYyZGQzYzEzNDRkNTdiY2I5MTllOGU5NjdmNDMzYzZh
+
+
+
+
+
 # Redwood
 >**HEADS UP:** RedwoodJS is _NOT_ ready for use in Production. It relies heavily on Prisma2, which is currently in testing with an expected production release coming soon. See status at ["Is Prisma2 Ready?"](https://isprisma2ready.com)
 
