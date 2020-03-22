@@ -7,7 +7,6 @@ export const schema = gql`
     type: String
     size: String
     price: String
-    availability: Boolean!
     listingUrl: String!
   }
 
