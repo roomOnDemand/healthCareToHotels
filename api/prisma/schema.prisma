@@ -11,8 +11,23 @@ generator photonjs {
 // Define your own datamodels here and run `yarn redwood db save` to create
 // migrations for them.
 // TODO: Please remove the following example:
-model UserExample {
+model User {
   id    Int     @id @default(autoincrement())
   email String  @unique
-  name  String?
+  lat  Float
+  long Float
+  //location
 }
+
+model Space {
+  id            Int @id @default(autoincrement())
+  address       String
+  state         String
+  zipcode       String
+  type          String?
+  size          String?
+  price         String?
+  availability  Boolean
+  listingUrl    String
+}
+// there should be a function which calculates distances between lat/long
