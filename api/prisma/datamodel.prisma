@@ -1,0 +1,183 @@
+type users
+{
+    email: String! @default(value: "")
+    user_type: Int! @default(value: 0)
+    organization_id: Int
+    first_name: String
+    last_name: String
+    occupation: String
+    employer: String
+    notify_inquiry: Boolean! @default(value: true)
+    notify_invite_accepted: Boolean! @default(value: true)
+    notify_payment_received: Boolean! @default(value: true)
+    notify_development_updates: Boolean! @default(value: true)
+    encrypted_password: String! @default(value: "")
+    reset_password_sent_at: DateTime
+    remember_created_at: DateTime
+    created_at: DateTime!
+    updated_at: DateTime!
+    phone: String!
+    manager_setup_complete: Boolean! @default(value:false)
+    index_users_on_email: ID! @unique
+    index_users_on_reset_password_token: ID! @unique
+}
+
+type rooms
+{
+    building_id: ID! @id
+    name: String
+    description: String
+    hourly_rate: Float
+    max_capacity: Int
+    square_footage: Int
+    shared: Boolean
+    furnished: Boolean
+    wifi: Boolean
+    projector: Boolean
+    landline: Boolean
+    monitor: Boolean
+    white_board: Boolean
+    tv: Boolean
+    sound_system: Boolean
+    natural_light: Boolean
+    rules: String
+    monday_start: DateTime!
+    monday_end: DateTime!
+    tuesday_start: DateTime!
+    tuesday_end: DateTime!
+    wednesday_start: DateTime!
+    wednesday_end: DateTime!
+    thursday_start: DateTime!
+    thursday_end: DateTime!
+    friday_start: DateTime!
+    friday_end: DateTime!
+    saturday_start: DateTime!
+    saturday_end: DateTime!
+    sunday_start: DateTime!
+    sunday_end: DateTime!
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+type reservations
+{
+    user_id: Int
+    room_id: Int
+    payment_status: Int! @default(value: 0)
+    estimated_party_size: Int
+    created_at: DateTime!
+    updated_at: DateTime!
+    guest_name: String
+    guest_email: String
+    price: Float @default(value: 0.0)
+    special_requests: String
+    stripe_charge_id: String
+}
+
+type photos
+{
+    room_id: Int
+    priority: Int
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+
+type organizations
+{
+    name: String
+    website: String
+    phone: String
+    accepted_payment_methods: Int! @default(value: 0)
+    stripe_account_id: String!
+    created_at: DateTime!
+    updated_at: DateTime!
+    connected_stripe_account_id: String
+    subdomain: String
+    stripe_refresh_token: String
+    index_organizations_on_subdomain: ID
+
+}
+type organization_customers
+{
+    user_id: Int
+    organization_id: Int
+    stripe_customer_id: String
+    index_organization_customers_on_organization_id: ID
+    index_organization_customers_on_user_id: ID
+}
+type buildings
+   {
+   organization_id: ID! @id
+   name: String!
+   address_1: String!
+   address_2: String!
+   city: String!
+   state: String!
+   zip: String!
+   phone: String!
+   rules: String!
+   access_instructions: String!
+   parking_lot: Boolean!
+   wheelchair_accessible: Boolean!
+   water_fountain: Boolean!
+   printer: Boolean!
+   pet_friendly: Boolean!
+   vending_machines: Boolean!
+   coffee_or_tea: Boolean!
+   refrigerator: Boolean!
+   microwave: Boolean!
+   created_at: DateTime!
+   updated_at: DateTime!
+   ac: Boolean!
+   latitude: Float!
+   longitude: Float!
+   }
+
+
+
+
+type availability_exceptions
+{
+  room_id: Int!
+  start_date: DateTime!
+  start_time: DateTime!
+  end_time: DateTime!
+  available: Boolean! @default(value: false)
+  recurrence: Int! @default(value: 0)
+  created_at: DateTime! @createdAt
+  updated_at: DateTime!
+  end_date: Datetime
+  reservation_id: Int
+  name: String!
+
+}
+type availabilities
+   {
+        room_id: Int!
+        date: DateTime!
+        half_hour_bits: Int!
+        created_at: DateTime! @createdAt
+        updated_at: DateTime! @updatedAt
+   }
+type active_storage_blobs
+{
+      key: String!
+      filename: String!
+      content_type: String
+      metadata: String
+      byte_size: Int!
+      checksum: String!
+      datetime: Datetime! @createdAt
+      index_active_storage_blobs_on_key: ID! @unique
+}
+
+type active_storage_attachments
+  {
+      name: String!
+      record_type: String!
+      record_id: Int!
+      blob_id: Int!
+      created_at: DateTime! @createdAt
+      index_active_storage_attachments_on_blob_id: ID
+      index_active_storage_attachments_uniqueness: ID @unique
+ }
